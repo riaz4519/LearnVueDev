@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Directive</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div id="app">
+    <h1 v-if="viewed2 = viewed">you have viewed this page</h1>
+    <span v-html="intro"></span>
+
+</div>
+
+
+<script src="../vue.js"></script>
+
+<script>
+
+    var app = new Vue({
+        el:'#app',
+        data:{
+            message: 'Hello Vue wolrd',
+            intro: "It is all about <small>vuejs</small>",
+            viewed: true,
+            viewed2:false,
+        }
+    })
+
+</script>
+</body>
+</html>
