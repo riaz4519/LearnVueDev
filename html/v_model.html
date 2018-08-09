@@ -5,15 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>v-for directive</title>
+    <title>V-model directive</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 </head>
 <body>
 <div id="app">
     <h1>{{message}}</h1>
-    <ul>
-        <li v-for="todo in todos">{{todo.id}}){{todo.text}}</li>
-    </ul>
+    <input type="text" v-model="message">
 
 </div>
 
@@ -25,16 +23,7 @@
     var app = new Vue({
         el:'#app',
         data:{
-            message: 'Hello Vue wolrd',
-            todos:[
-                {text:"Like",id:1},
-                {text:"comment",id:2},
-                {text:"share",id:3},
-                {text:"Like",id:1},
-                {text:"comment",id:2},
-                {text:"share",id:3},
-                ]
-
+            message: 'Hello Vue wolrd'
         }
     })
 
